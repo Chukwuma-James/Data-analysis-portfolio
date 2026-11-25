@@ -4,7 +4,24 @@ Sales performance, data quality, SQL analysis, and Power BI dashboard review
 
 **Prepared by:** Chukwuma Kanayochukwu James  
 **Date:** November 25, 2026
+Table of Contents
 
+1. "Executive Summary" (#executive-summary)
+2. "Project Overview" (#project-overview)
+3. "Dataset" (#dataset)
+4. "Dashboard" (#dashboard)
+5. "Key Findings" (#key-findings)
+   - "Product Performance" (#product-performance)
+   - "Monthly Revenue" (#monthly-revenue)
+   - "Weekday Revenue" (#weekday-revenue)
+   - "Service Location" (#service-location)
+   - "Payment Method" (#payment-method)
+6. "Recommendations" (#recommendations)
+7. "Limitations" (#limitations)
+8. "SQL Analysis" (#sql-analysis)
+9. "Power BI Measures" (#power-bi-measures)
+10. "Conclusion" (#conclusion)
+    
 ## Executive Summary
 
 This analysis reviews 10,000 café transaction records from 2023. The dataset contains 10,000 unique transaction IDs. Recorded sales total **$88,952 across 9,960 transactions with usable totals**, for an average transaction value of **$8.93**.
