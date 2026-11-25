@@ -44,8 +44,7 @@ The source file, `Cafe-sales.csv`, contains 10,000 rows and 10 columns covering 
 The source contains errors, Unknown labels, and missing values. Data cleaning was performed in Excel before SQL analysis. For time-based analysis, Month and Day of Week should be derived from the transaction date.
 
 ## Dashboard
-![Cafe Sales Dashboard]
-(DASHBOARD.png)
+![Cafe Sales Dashboard](./DASHBOARD.png)
 
 ## Key Findings
 
