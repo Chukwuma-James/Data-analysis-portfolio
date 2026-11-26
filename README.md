@@ -10,19 +10,20 @@ Sales performance, data quality, SQL analysis, and Power BI dashboard review
 
 1. [Executive Summary](#executive-summary)
 2. [Project Overview](#project-overview)
-3. [Dataset](#dataset)
-4. [Dashboard](#dashboard)
-5. [Key Findings](#key-findings)
+3. [Methodology]
+4. [Dataset](#dataset)
+5. [Dashboard](#dashboard)
+6. [Key Findings](#key-findings)
    - [Product Performance](#product-performance)
    - [Monthly Revenue](#monthly-revenue)
    - [Weekday Revenue](#weekday-revenue)
    - [Service Location](#service-location)
    - [Payment Method](#payment-method)
-6. [Recommendations](#recommendations)
-7. [Limitations](#limitations)
-8. [SQL Analysis](#sql-analysis)
-9. [Power BI Measures](#power-bi-measures)
-10. [Conclusion](#conclusion)
+7. [Recommendations](#recommendations)
+8. [Limitations](#limitations)
+9. [SQL Analysis](#sql-analysis)
+10. [Power BI Measures](#power-bi-measures)
+11. [Conclusion](#conclusion)
 
     
     
@@ -45,6 +46,20 @@ The goal was to understand sales patterns, identify performance drivers, and pro
 - **SQL Server Management Studio (SSMS)** for structured queries and aggregation
 - **Power BI** for a one-page interactive dashboard with measures, KPI cards, charts, and slicers
 - **PowerPoint** for an executive presentation and written report
+
+## Methodology
+
+The work followed a four-stage analytical pipeline:
+
+| Stage | Tool | Activities |
+|---|---|---|
+| 1 | Microsoft Excel | Imported and inspected the source, cleaned and formatted values, and prepared derived Month and Day of Week fields. |
+| 2 | SQL Server Management Studio (SSMS) | Queried eight business questions using aggregations, grouping, and ordering. |
+| 3 | Power BI | Built a one-page interactive dashboard with DAX measures, calculated columns, KPI cards, bar, line, donut, and clustered column charts, and slicers. |
+| 4 | PowerPoint and Word | Prepared a nine-slide executive presentation and this analytical report. |
+
+Reported revenue totals use rows with usable `Total Spent`. Time-based comparisons additionally require a usable transaction date. Unit totals include usable quantities. Unknown category labels are retained as their own category rather than reassigned. Month and weekday should be recomputed from transaction date for time analysis.
+
 
 
 ## Dataset
@@ -161,6 +176,12 @@ Revenue among named payment methods was close. Cash had the highest average tran
 - The dataset has no product costs, labor costs, customer IDs, discounts, promotion calendar, or transaction times. Profit, retention, promotion effects, hourly staffing demand, and causal effects cannot be calculated.
 - Only 2023 is available, so year-over-year trends and recurring seasonality cannot be established.
 - Recommendations are framed for café operations and may need adjustment for another audience.
+
+ ## Conclusion
+
+The results identify practical opportunities in product promotion, weekday operations, inventory planning, and data collection. Salad led recorded item revenue, Coffee led known unit sales, and Thursday and June were the strongest weekday and month in this single year of data. Improving the completeness of transaction records will make future comparisons more useful. Applying the recommendations can support revenue growth, reduce operational inefficiencies, improve customer experience, and strengthen business decisions; the effect of each action should be evaluated with complete future data.
+
+
 
 
 
