@@ -44,7 +44,7 @@ The goal was to understand sales patterns, identify performance drivers, and pro
 - **Microsoft Excel** for data inspection, cleaning, formatting, and derived date fields
 - **SQL Server Management Studio (SSMS)** for structured queries and aggregation
 - **Power BI** for a one-page interactive dashboard with measures, KPI cards, charts, and slicers
-- **PowerPoint and Word** for an executive presentation and written report
+- **PowerPoint** for an executive presentation and written report
 
 
 ## Dataset
