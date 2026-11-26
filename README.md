@@ -4,6 +4,8 @@ Sales performance, data quality, SQL analysis, and Power BI dashboard review
 
 **Prepared by:** Chukwuma Kanayochukwu James  
 **Date:** November 25, 2026
+
+
 ## Table of Contents
 
 1. [Executive Summary](#executive-summary)
@@ -21,6 +23,8 @@ Sales performance, data quality, SQL analysis, and Power BI dashboard review
 8. [SQL Analysis](#sql-analysis)
 9. [Power BI Measures](#power-bi-measures)
 10. [Conclusion](#conclusion)
+
+    
     
 ## Executive Summary
 
@@ -32,6 +36,7 @@ This analysis reviews 10,000 café transaction records from 2023. The dataset co
 
 Monthly and weekday rankings describe this single year only; they do not establish recurring seasonality or customer behavior.
 
+
 ## Project Overview
 
 The goal was to understand sales patterns, identify performance drivers, and provide practical recommendations for café operations. The project used:
@@ -40,6 +45,7 @@ The goal was to understand sales patterns, identify performance drivers, and pro
 - **SQL Server Management Studio (SSMS)** for structured queries and aggregation
 - **Power BI** for a one-page interactive dashboard with measures, KPI cards, charts, and slicers
 - **PowerPoint and Word** for an executive presentation and written report
+
 
 ## Dataset
 
@@ -62,6 +68,7 @@ The source contains errors, Unknown labels, and missing values. Data cleaning wa
 
 ## Dashboard
 ![Cafe Sales Dashboard](https://raw.githubusercontent.com/Chukwuma-James/Data-analysis-portfolio/main/Cafe-Sales-Analysis/DASHBOARD.png)
+
 
 ## Key Findings
 
@@ -155,95 +162,5 @@ Revenue among named payment methods was close. Cash had the highest average tran
 - Only 2023 is available, so year-over-year trends and recurring seasonality cannot be established.
 - Recommendations are framed for café operations and may need adjustment for another audience.
 
-## SQL Analysis
-
-The report analyzed total revenue and transaction count, revenue and unit sales by item, monthly and weekday revenue, revenue by location, transaction counts by payment method, and average transaction value by payment method.
-
-```sql
--- Total revenue and number of transactions
-SELECT
-    SUM(Total_Spent) AS Total_Revenue,
-    COUNT(Transaction_ID) AS Number_of_Transactions
-FROM Cafe_sales;
-
--- Revenue by item
-SELECT Item, SUM(Total_Spent) AS Revenue
-FROM Cafe_sales
-GROUP BY Item
-ORDER BY Revenue DESC;
-
--- Units sold by item
-SELECT Item, SUM(Quantity) AS Units_Sold
-FROM Cafe_sales
-GROUP BY Item
-ORDER BY Units_Sold DESC;
-
--- Monthly revenue
-SELECT Month, SUM(Total_Spent) AS Monthly_Revenue
-FROM Cafe_sales
-GROUP BY Month
-ORDER BY Monthly_Revenue DESC;
-
--- Revenue by weekday
-SELECT Day_of_Week, SUM(Total_Spent) AS Daily_Revenue
-FROM Cafe_sales
-GROUP BY Day_of_Week
-ORDER BY Daily_Revenue DESC;
-
--- Transactions and revenue by location
-SELECT Location, COUNT(*) AS Transactions, SUM(Total_Spent) AS Total_Revenue
-FROM Cafe_sales
-GROUP BY Location
-ORDER BY Total_Revenue DESC;
-
--- Transaction count by payment method
-SELECT Payment_Method, COUNT(Transaction_ID) AS Transactions
-FROM Cafe_sales
-GROUP BY Payment_Method
-ORDER BY Transactions DESC;
-
--- Average transaction value by payment method
-SELECT Payment_Method,
-       AVG(Total_Spent) AS Average_Transaction_Value,
-       COUNT(Transaction_ID) AS Transactions
-FROM Cafe_sales
-GROUP BY Payment_Method
-ORDER BY Average_Transaction_Value DESC;
-```
-
-## Power BI Measures
-
-```DAX
-Average Order Value =
-DIVIDE(SUM(Clean[Total Spent]), COUNTROWS(Clean), 0)
-
-Most Preferred Payment Method =
-VAR T =
-    ADDCOLUMNS(
-        VALUES(Clean[Payment Method]),
-        "TotalCount", CALCULATE(COUNTROWS(Clean))
-    )
-RETURN
-    MAXX(TOPN(1, T, [TotalCount], DESC), Clean[Payment Method])
-
-Previous Month Sales =
-CALCULATE([Total Revenue], PREVIOUSMONTH(Clean[Transaction Date]))
-
-Revenue Growth % =
-DIVIDE([Total Revenue] - [Previous Month Sales], [Previous Month Sales], 0)
-
-Total Revenue =
-SUM(Clean[Total Spent])
-
-Total Transactions =
-COUNTROWS(Clean)
-
-Units Sold =
-SUM(Clean[Quantity])
-```
-
-## Conclusion
-
-The analysis points to opportunities in product promotion, weekday operations, inventory planning, and data collection. Improving the completeness of transaction data will make future sales comparisons more useful and support better operational decisions.
 
 
