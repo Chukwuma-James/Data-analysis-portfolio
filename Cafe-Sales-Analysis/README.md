@@ -1,1 +1,0 @@
-# Cafe Sales Analysis Project
