@@ -85,7 +85,7 @@ The source contains errors, Unknown labels, and missing values. Data cleaning wa
 
 **Salad** generated the highest item revenue at **$19,070** from 1,269 transactions with valid totals. Coffee had the highest known unit sales at **3,902**. Cookie had the lowest revenue among named products at **$3,589**. Unknown items accounted for another **$5,141** across 477 valid-total transactions.
 
-| Item | Valid-total transactions | Revenue | Known units |
+| Item | Total transactions | Revenue | Known units |
 |---|---:|---:|---:|
 | **Salad** | **1,269** | **$19,070** | **3,818** |
 | Sandwich | 1,123 | $13,664 | 3,424 |
@@ -102,7 +102,7 @@ The source contains errors, Unknown labels, and missing values. Data cleaning wa
 
 Of 9,501 transactions with both a valid total and date, **June** led with **$7,350** and February was lowest at **$6,633.50**. The difference was **$716.50 (10.8% of February revenue)**. This is a one-year comparison, not evidence of a recurring seasonal pattern.
 
-| Month | Valid transactions | Revenue |
+| Month | Total transactions | Revenue |
 |---|---:|---:|
 | January | 814 | $7,242 |
 | February | 724 | $6,633.50 |
@@ -122,7 +122,7 @@ Of 9,501 transactions with both a valid total and date, **June** led with **$7,3
 
 **Thursday** led with **$12,394**, while Wednesday was lowest at **$11,616.50**. The weekday analysis covers $84,786.50 across 9,501 valid dated transactions.
 
-| Weekday | Valid transactions | Revenue |
+| Weekday | Total transactions | Revenue |
 |---|---:|---:|
 | Monday | 1,377 | $12,135 |
 | Tuesday | 1,307 | $12,030.50 |
@@ -137,7 +137,7 @@ Of 9,501 transactions with both a valid total and date, **June** led with **$7,3
 
 Among known locations, In-store revenue was **$27,127** and Takeaway revenue was **$26,487.50**, a difference of $639.50 (about 2.4% of Takeaway revenue). **Unknown** location labels represent a substantial portion of sales, limiting the known-channel comparison.
 
-| Location | Valid-total transactions | Revenue |
+| Location | Total transactions | Revenue |
 |---|---:|---:|
 | **In-store** | **3,003** | **$27,127** |
 | Takeaway | 3,009 | $26,487.50 |
