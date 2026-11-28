@@ -54,7 +54,7 @@ The work followed a four-stage analytical pipeline:
 | 1 | Microsoft Excel | Imported and inspected the source, cleaned and formatted values, and prepared derived Month and Day of Week fields. |
 | 2 | SQL Server Management Studio (SSMS) | Queried eight business questions using aggregations, grouping, and ordering. |
 | 3 | Power BI | Built a one-page interactive dashboard with DAX measures, calculated columns, KPI cards, bar, line, donut, clustered column charts, and slicers. |
-| 4 | PowerPoint | Prepared a nine-slide executive presentation |
+| 4 | PowerPoint | Prepared a thirteen-slide executive presentation |
 
 ## Dataset description
 
