@@ -33,9 +33,7 @@ This analysis reviews 10,000 café transaction records from 2023. The dataset co
 
 - **Salad** generated the most revenue (**$19,070**), while **Coffee** sold the most known units (**3,902**).
 - Among records with valid dates and totals, **June** had the highest monthly revenue (**$7,350**) and **Thursday** had the highest weekday revenue (**$12,394**).
-- Data quality issues include 40 unusable totals, 38 unusable quantities, 38 unusable unit prices, 460 unusable dates, 480 Unknown item labels, 3,961 Unknown location labels, and 3,178 Unknown payment labels.
-
-Monthly and weekday rankings describe this single year only; they do not establish recurring seasonality or customer behavior.
+  
 
 
 ## Project Overview
@@ -55,16 +53,12 @@ The work followed a four-stage analytical pipeline:
 |---|---|---|
 | 1 | Microsoft Excel | Imported and inspected the source, cleaned and formatted values, and prepared derived Month and Day of Week fields. |
 | 2 | SQL Server Management Studio (SSMS) | Queried eight business questions using aggregations, grouping, and ordering. |
-| 3 | Power BI | Built a one-page interactive dashboard with DAX measures, calculated columns, KPI cards, bar, line, donut, and clustered column charts, and slicers. |
-| 4 | PowerPoint and Word | Prepared a nine-slide executive presentation and this analytical report. |
+| 3 | Power BI | Built a one-page interactive dashboard with DAX measures, calculated columns, KPI cards, bar, line, donut, clustered column charts, and slicers. |
+| 4 | PowerPoint | Prepared a nine-slide executive presentation |
 
-Reported revenue totals use rows with usable `Total Spent`. Time-based comparisons additionally require a usable transaction date. Unit totals include usable quantities. Unknown category labels are retained as their own category rather than reassigned. Month and weekday should be recomputed from transaction date for time analysis.
+## Dataset discription
 
-
-
-## Dataset
-
-The source file, `Cafe-sales.csv`, contains 10,000 rows and 10 columns covering January–December 2023.
+The source file, `Cafe-sales.csv`, was downloaded fron Kaggle.com and it contains 10,000 rows and 10 columns covering January–December 2023.
 
 | Field | Type | Description |
 |---|---|---|
@@ -79,7 +73,7 @@ The source file, `Cafe-sales.csv`, contains 10,000 rows and 10 columns covering 
 | Month | Text | Month of transaction |
 | Day of Week | Text | Weekday of transaction |
 
-The source contains errors, Unknown labels, and missing values. Data cleaning was performed in Excel before SQL analysis. For time-based analysis, Month and Day of Week should be derived from the transaction date.
+The source contains errors, Unknown labels, and missing values. Data cleaning was performed in Excel before SQL analysis. 
 
 ## Dashboard
 ![Cafe Sales Dashboard](https://raw.githubusercontent.com/Chukwuma-James/Data-analysis-portfolio/main/Cafe-Sales-Analysis/DASHBOARD.png)
@@ -93,7 +87,7 @@ The source contains errors, Unknown labels, and missing values. Data cleaning wa
 
 | Item | Valid-total transactions | Revenue | Known units |
 |---|---:|---:|---:|
-| Salad | 1,269 | $19,070 | 3,818 |
+| **Salad** | **1,269** | **$19,070** | **3,818** |
 | Sandwich | 1,123 | $13,664 | 3,424 |
 | Smoothie | 1,091 | $13,320 | 3,330 |
 | Juice | 1,167 | $10,509 | 3,505 |
@@ -115,7 +109,7 @@ Of 9,501 transactions with both a valid total and date, **June** led with **$7,3
 | March | 825 | $7,214.50 |
 | April | 769 | $7,168 |
 | May | 771 | $6,941.50 |
-| June | 816 | $7,350 |
+| **June** | **816** | **$7,350** |
 | July | 789 | $6,877.50 |
 | August | 800 | $7,077.50 |
 | September | 784 | $6,846 |
@@ -133,7 +127,7 @@ Of 9,501 transactions with both a valid total and date, **June** led with **$7,3
 | Monday | 1,377 | $12,135 |
 | Tuesday | 1,307 | $12,030.50 |
 | Wednesday | 1,333 | $11,616.50 |
-| Thursday | 1,374 | $12,394 |
+| **Thursday** | **1,374** | **$12,394** |
 | Friday | 1,381 | $12,317.50 |
 | Saturday | 1,352 | $12,007.50 |
 | Sunday | 1,377 | $12,285.50 |
@@ -145,7 +139,7 @@ Among known locations, In-store revenue was **$27,127** and Takeaway revenue was
 
 | Location | Valid-total transactions | Revenue |
 |---|---:|---:|
-| In-store | 3,003 | $27,127 |
+| **In-store** | **3,003** | **$27,127** |
 | Takeaway | 3,009 | $26,487.50 |
 | Unknown | 3,948 | $35,337.50 |
 
@@ -153,7 +147,7 @@ Among known locations, In-store revenue was **$27,127** and Takeaway revenue was
 
 Revenue among named payment methods was close. Cash had the highest average transaction value among named methods at **$9.06**. **Unknown** labels account for $27,775 across 3,164 valid-total transactions. These small differences do not establish customer preference or payment profitability.
 
-| Payment method | Valid-total transactions | Revenue | Average transaction |
+| Payment method | Total transactions | Revenue | Average transaction |
 |---|---:|---:|---:|
 | Credit Card | 2,266 | $20,427 | $9.02 |
 | Digital Wallet | 2,282 | $20,383.50 | $8.93 |
@@ -175,7 +169,7 @@ Revenue among named payment methods was close. Cash had the highest average tran
 - Unknown item, location, and payment labels make named-category comparisons incomplete. Unknown values should not be silently reassigned or removed.
 - The dataset has no product costs, labor costs, customer IDs, discounts, promotion calendar, or transaction times. Profit, retention, promotion effects, hourly staffing demand, and causal effects cannot be calculated.
 - Only 2023 is available, so year-over-year trends and recurring seasonality cannot be established.
-- Recommendations are framed for café operations and may need adjustment for another audience.
+
 
  ## Conclusion
 
