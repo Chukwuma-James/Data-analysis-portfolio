@@ -11,7 +11,7 @@ Sales performance, data quality, SQL analysis, and Power BI dashboard review
 1. [Executive Summary](#executive-summary)
 2. [Project Overview](#project-overview)
 3. [Methodology](#methodology)
-4. [Dataset](#dataset)
+4. [Dataset Description](#dataset-description)
 5. [Dashboard](#dashboard)
 6. [Key Findings](#key-findings)
    - [Product Performance](#product-performance)
