@@ -77,7 +77,7 @@ The source contains errors, Unknown labels, and missing values. Data cleaning wa
 
 ## Dashboard
 ![Cafe Sales Dashboard]
-(Cafe%Sales%Dashboard.png)
+(Cafe%20Sales%20Dashboard.png)
 
 
 ## Key Findings
