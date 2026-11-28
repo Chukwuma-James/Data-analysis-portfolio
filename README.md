@@ -76,8 +76,7 @@ The source file, `Cafe-sales.csv`, was downloaded from Kaggle.com and it contain
 The source contains errors, Unknown labels, and missing values. Data cleaning was performed in Excel before SQL analysis. 
 
 ## Dashboard
-![Cafe Sales Dashboard]
-(Cafe%20Sales%20Dashboard.png)
+![Cafe Sales Dashboard](./Cafe%20Sales%20Dashboard.png)
 
 
 ## Key Findings
