@@ -58,7 +58,7 @@ The work followed a four-stage analytical pipeline:
 
 ## Dataset description
 
-The source file, `Cafe-sales.csv`, was downloaded fron Kaggle.com and it contains 10,000 rows and 10 columns covering January–December 2023.
+The source file, `Cafe-sales.csv`, was downloaded from Kaggle.com and it contains 10,000 rows and 10 columns covering January–December 2023.
 
 | Field | Type | Description |
 |---|---|---|
